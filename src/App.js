@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+import "./App.css";
 
-function App() {
+export default function App() {
+  const newsCard = ({title, desc}) => {
+    return (
+      <div>
+        <h1>{title}</h1>
+        <p>{desc}</p>
+      </div>
+    );
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src="green.jpg" />
+      {newsCard({ title: 'Новость 1', desc: 'ntrcn' })}
+      {newsCard({ title: 'Новость 2', desc: 'ferfegerergege' })}
+      {newsCard({ title: 'Новость 3', desc: 'ewfrwefwefewf' })}
     </div>
   );
 }
-
-export default App;
